@@ -1,0 +1,55 @@
+01) Creamos la carpeta donde queremos tener el proyecto
+02) Con la consola de linux, dentro de la carpeta de nuestro proyecto: npm init
+03)Instalar librerias y paquetes:
+
+npm install express --save
+npm install bcrypt-nodejs --save  (para las contraseñas)
+npm install body-parser --save (parseador) ya no es necesario
+npm install connect-multiparty --save
+npm install mongoose --save (base datos)
+npm install --save jwt-simple (tokens)
+npm install moment --save (fechas)
+npm install nodemon --save-dev (solo en local/desarrollo)
+
+
+*** npm install --save mongoose-pagination
+
+**************************************
+en express 4.16 o superior body-parser esta incluido en sus metodos
+Alberto · Clase 8 · hace 9 meses
+a partir de la versión 4.16 de express body-parser esta incluido dentro de sus métodos.
+
+//con body-parser
+ 
+//importar libreria
+const bodyParser = require('body-parser');
+ 
+//uso
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
+ 
+app.use(bodyParser.json());
+
+//con express 4.16 en adelante
+ 
+//importar libreria
+const express = require('express');
+ 
+//uso
+app.use(express.urlencoded({
+  extended: true
+}));
+ 
+app.use(express.json());
+
+************************
+04)Crear bd --> lanzamos el mongod (el demonio) y luego ejecutamos el Robo 3T
+05) Crear index.js dentro de api (segun nuestro ejemplo)
+06) Una vez configurado el index.js con "node index.js" podremos conectarnos a la bd
+07) para que nos permita reconocer los cambios dinamicos necesitamos nodemon:haremos un script en: package.json
+08) Nos vamos a  package.json y en scripts añadimos:
+	"start" : "nodemon index.js",
+09) ahora ejecutamos con: "npm start"
+
+

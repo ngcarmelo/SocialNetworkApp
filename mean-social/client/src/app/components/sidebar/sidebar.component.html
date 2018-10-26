@@ -1,0 +1,79 @@
+<div class="col-lg-4 sidebar-32">
+<h1 class="h1-strong">Hola, {{identity.name}}</h1>
+</div>
+<div id="user-card" class="col-lg-4 panel panel-default pull-let">
+		<div class="avatar pull-left">
+			<img src="{{url +'/get-image-user/'+identity.image}}" alt="" *ngIf="identity.name">
+			<img src="{{assets/user.png}}" alt="" *ngIf="!identity.name">
+		</div>
+
+		<div class="name-surname pull-left">
+			<a href="#" class="username">
+				{{identity.name + ' '+ identity.surname}}
+			</a>
+			<p class="nickname">{{identity.nick}}</p>
+			<div class="clearfix"> </div>
+
+		</div>
+		<div class="clearfix"></div>
+		<div class="stats" *ngIf="stats">
+			<div class="following-data">
+				<a href="#">
+					<span class="label-stats">
+						Siguiente
+					</span>
+					<span class="number-stats">
+						{{stats.following}}
+					</span>
+				</a>
+			</div>
+
+			<div class="following-data">
+				<a href="#">
+					<span class="label-stats">
+						Seguidores
+					</span>
+					<span class="number-stats">
+						{{stats.followed}}
+					</span>
+				</a>
+			</div>
+
+			<div class="following-data">
+				<a href="#">
+					<span class="label-stats">
+						Publicaciones
+					</span>
+					<span class="number-stats">
+						{{stats.publications}}
+					</span>
+				</a>
+			</div>
+		</div>
+</div>
+
+<!-- Formulario de publicaciones -->
+
+<div id="new-publication" class="col-lg-4 pull-left panel panel-default">
+	<div class="alert alert-success" *ngIf="status == 'success' ">
+		Publicacion enviada correctamente
+	</div>
+	<div class="alert alert-danger" *ngIf="status == 'error' ">
+		Publicacion no enviada 
+	</div>
+	<!-- <h3>Crear publicación</h3> -->
+	<form #newPubForm="ngForm" (ngSubmit)="onSubmit(newPubForm)" class="col-lg-10">
+		<p>
+			<label>¿Que estás pensando hoy?</label>
+			<textarea name="text" #text="ngModel" [(ngModel)]="publication.text" class="form-control" required ></textarea>
+			<span *ngIf="!text.valid && text.touched">
+				El texto de la publicacion es obligatorio
+			</span>
+		</p>
+		<p>
+			<label>Sube tu fofo</label>
+			<input type="file" placeholder="Sube tu foto">
+		</p>
+		<input type="submit" value="Enviar" class="btn btn-success" [disabled]="!newPubForm.form.valid">
+	</form>
+</div>

@@ -1,0 +1,65 @@
+<div class="navigation col-lg-12">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a href="#" class="navbar-brand"> {{title}}</a>
+      </div>
+    <!-- Hemos añadido el ngIf segun existe identity mostrará/ocultara el menu superior  -->
+    <ul class="nav navbar-nav" *ngIf="identity">
+      <li>
+        <a [routerLink]="['/home']" [routerLinkActive]="['active']">
+        <span class="glyphicon glyphicon-home"></span>
+        Inicio</a>
+      </li>
+       <li>
+        <a [routerLink]="['/timeline']" [routerLinkActive]="['active']">
+        <span class="glyphicon glyphicon-list"></span>
+        TimeLine</a>
+      </li>
+       <li>
+        <a [routerLink]="['/gente']" [routerLinkActive]="['active']">
+        <span class="glyphicon glyphicon-user"></span>
+        Gente</a>
+      </li>
+    </ul>
+    
+    <ul class="nav navbar navbar-nav navbar-right" *ngIf="!identity">
+      <li>
+        <a [routerLink]="['/login']" [routerLinkActive]="['active']">
+        <span class="glyphicon glyphicon-log-in"></span>
+        Login</a>
+      </li>
+       <li>
+          <a [routerLink]="['/registro']" [routerLinkActive]="['active']">
+        <span class="glyphicon glyphicon-user"></span>
+        Registro</a>
+      </li>
+    </ul>
+
+  <!-- Si estamos identificados nos mostrara el dropdown del perfil usuario: -->
+  <ul class="nav navbar-nav navbar-right" *ngIf="identity">
+      <li class="avatar">
+        <!-- Cargar imagen de usuario -->
+        <img src="{{url +'/get-image-user/'+identity.image}}" alt="" *ngIf="identity && identity.image">
+      </li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#"> {{identity.name}} <span class="caret"></span></a>
+
+          <ul class="dropdown-menu">
+            <li><a href="#"> <span class="glyphicon glyphicon-user"></span> Mi perfil</a>
+            </li>
+            <li><a [routerLink]="['/mis-datos']"  ><span class="glyphicon glyphicon-user"></span> Mis Datos</a>
+            </li>
+              <li><a class="pointer" (click)="logout()" ><span class="glyphicon glyphicon-log-out"></span> Cerrar sesión</a>
+            </li>
+
+
+          </ul>
+      </li>
+  </ul>
+
+    </div>
+  </nav>
+</div>
+
+<router-outlet> </router-outlet>

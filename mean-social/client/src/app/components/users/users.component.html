@@ -1,0 +1,72 @@
+<div class="col-lg-8">
+	<h1 class="h1-strong">{{ title }}</h1>
+
+	<div class="people">
+		<!-- LISTADO  -->
+		<div *ngFor="let user of users" class="item-user">
+			<div class="panel panel-default">
+				<div class="panel-body">
+				<div class="image-user pull-left">
+					<a href="#">
+						<img src="{{url +'/get-image-user/' +user.image }}" alt="" *ngIf="user.image">
+						<img src="assets/user.png" class="avatar-default" alt="" *ngIf="!user.image">
+					</a>
+				</div>
+
+				<div class="user-name pull-left">
+				
+				<p class="name-surname">	<a href="#">{{user.name + '' + user.surname}}  </a></p>
+				<p class="nickname">{{user.nick}}</p>
+				</div>
+				<!-- Botones seguir/dejar de seguir  -->
+				<!-- esta condicion es para que no nos muetro nuestro propio usuario -->
+				<div class="pull-right" *ngIf="user._id != identity._id"> 
+					<!-- sino seguimos a este usuario nos aparecerá el boton seguir: -->
+					<!-- follows: variable array con los usuarios que seguimos  -->
+					<!-- user._id se refiere al id de cada usuario de la lista de usuarios  
+						**recordar que estamos en un bucle for ahora, para mostrar la lista -->
+					<button class="btn btn-success" *ngIf="follows.indexOf(user._id) < 0"
+					(click)="followUser(user._id)">
+						<span class="glyphicon glyphicon-plus-sign"></span>
+						Seguir
+					</button>
+
+				
+
+					<button class="btn btn-primary" *ngIf="follows.indexOf(user._id) >= 0" 
+						(mouseenter)="mouseEnter(user._id)"
+						(mouseleave)="mouseLeave(user._id)"
+						(click)="unfollowUser(user._id)"
+						[class.btn-danger]="user._id == followUserOver" 
+						>
+						<!-- aplicamos la clase btn-danger cuando se cumpla la igualdad -->
+
+
+							<!-- uso del template para el else -->
+							<span *ngIf="user._id == followUserOver; else following">
+							<span class="glyphicon glyphicon-minus-sign"></span>
+						Dejar de Seguir
+						</span>
+
+						<ng-template #following >
+						<span class="glyphicon glyphicon-ok-sign"></span>
+						Siguiendo
+						</ng-template>
+						
+					</button>
+				</div>
+			</div>
+			</div>
+		</div>
+		<!-- PAGINACION -->
+		<ul class="pagination pull-right">
+			<!-- page: pagina actual, pages: total paginas -->
+			<li *ngIf="page > 1"><a [routerLink]="['/gente', prev_page]">Anterior</a></li>
+			<li *ngIf="pages != page"><a [routerLink]="['/gente', next_page]">Siguiente</a></li>
+		</ul>
+	</div>
+</div>
+
+<sidebar></sidebar>
+
+<div class="clearfix"></div>

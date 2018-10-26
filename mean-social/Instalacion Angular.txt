@@ -1,0 +1,78 @@
+1) Tener Instalado node y angular cli
+2) Crear nuevo proyecto angular, con la consola cli ng new nombre proyeco
+3) Instalar librerias:
+
+***Metodo antiguo: ***
+4)Ir a package.json y añadir en dependencies:
+ "bootstrap": "3.3.6",
+    "jquery": "1.12"
+
+5) En la consola: npm update
+
+6) Configurar las librerias: Ir a angular.json
+
+**6.5) En la carpeta assets crear styles.css y borrar el styles.css que hay fuera
+7) Dentro de angular.json en styles y scrips añadir rutas:
+
+	 "styles": [
+              "src/assets/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+            ],
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
+8) Parar y volver a compilar Angular (sino da error)
+9) Habrá que declarar las variables de jquery en cada componente:
+declare var jQuery:any;
+declare var $:any;
+
+************************
+Configurar rutas en angular:
+1) Crear "app.routing.ts" dentro de app
+2)en app.module importar las constantes creadas en routing
+3)en app.component.html añadir --> <router-outlet> </router-outlet>
+
+
+*********************************
+rxjs/Observable
+Sección 11, Clase 75
+En Angular 6 al importar Observable en nuestros servicios:
+
+import { Observable } from 'rxjs/Observable';
+
+Puede ser que nos devuelva un error por la consola de comandos, algo como esto:
+
+ERROR in node_modules/rxjs/Observable.d.ts(1,15): error TS2307: Cannot find module 'rxjs-compat/Observable'.
+
+Para solucionarlo tenemos que cortar la ejecución de nuestro servidor local de desarrollo de Angular pulsando Ctrl+C y ejecutamos este comando para instalar una libreria que falta:
+
+npm install --save rxjs-compat
+
+Después arrancamos de nuevo nuestro proyecto de Angular con el comando:
+
+ng serve
+
+y todo estará listo.
+
+Nos vemos en la siguiente clase. Muchas gracias :)
+********************************
+
+*******************
+Instalacion Moment:
+npm install --save angular2-moment
+***Ademas hará falta añadirlo en appmodule.ts
+
+import { MomentModule} from 'angular2-moment';   
+y en los imports: --> MomentModule
+
+
+
+
+
+
+
+
+
+
+
