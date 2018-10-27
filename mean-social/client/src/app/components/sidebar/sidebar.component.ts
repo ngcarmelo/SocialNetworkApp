@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+//Añadimos EventEmitter, Input...para la comunicación  entre componentes
+import { Component, OnInit, EventEmitter, Input, Output } from '@angular/core'; 
 import { Router, ActivatedRoute, Params } from '@angular/router';
 
 //Importamos el servicio, donde están los metodos
@@ -22,7 +23,7 @@ export class SidebarComponent implements OnInit {
 	public status;
 	public publication: Publication;
 
-
+  
   constructor(
   	 private _userService: UserService, //Variable del servicio UserService
      private _publicationService: PublicationService,
@@ -67,6 +68,14 @@ export class SidebarComponent implements OnInit {
                 }
       }
       );
+  }
+
+  // Output
+  //Decorador Output y crear la propiedad  que será el evento --> "sended"
+  @Output() sended = new EventEmitter();
+  sendPublication(event){
+    console.log(event);
+    this.sended.emit({send: 'true'});  //emito el evento
   }
 
 

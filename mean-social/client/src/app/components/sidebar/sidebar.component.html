@@ -62,7 +62,7 @@
 		Publicacion no enviada 
 	</div>
 	<!-- <h3>Crear publicación</h3> -->
-	<form #newPubForm="ngForm" (ngSubmit)="onSubmit(newPubForm)" class="col-lg-10">
+	<form #newPubForm="ngForm" (ngSubmit)="onSubmit(newPubForm); sendPublication($event)" class="col-lg-10">
 		<p>
 			<label>¿Que estás pensando hoy?</label>
 			<textarea name="text" #text="ngModel" [(ngModel)]="publication.text" class="form-control" required ></textarea>

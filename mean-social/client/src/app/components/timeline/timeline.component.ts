@@ -131,8 +131,11 @@ getPublications(page, adding = false){
       this.getPublications(this.page, true);
   }
 
-
-
+  //Evento output del sidebar
+  refresh(event){
+   // console.log(event);
+   this.getPublications(1);
+  }
 
 
 

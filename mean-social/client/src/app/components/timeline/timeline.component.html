@@ -1,5 +1,7 @@
 <div class="col-lg-8">
-	<h1 class="h1-strong">{{title}}</h1>
+	<h1 class="h1-strong">{{title}}
+		<button class="btn btn-success btn-sm" (click)="refresh($event)">Mostrar nuevas</button></h1>
+
 	<div id="publications">
 		<div *ngFor="let publication of publications" class="item-publication">
 			<div class="panel panel-default">
@@ -28,8 +30,9 @@
 		<p><button class="btn btn-success" (click)="viewMore()" *ngIf="!noMore">Ver más publicaciones</button>
 			</p>
 	</div>
-
+	
 </div>
-<sidebar></sidebar>
+<!-- hemos emitido un evento desde el hijo(sidebar), para que se ejecute un metodo del padre(timeline) -->
+<sidebar (sended)="refresh($event)"></sidebar>
 
 <div class="clearfix"></div>	
