@@ -8,9 +8,37 @@
 	</div>
 
 	<div class="user-name pull-left">
-		<p class="name">{{user.name + ' '+ user.surname}}</p>
-		<p class="nick">{{user.nick}}</p>
+		<div class="label label-default pull-left" *ngIf="followed">
+			Te sigue
+		</div>
+	<div class="clearfix"></div>
+		<div class="pull-left">
+			<p class="name">{{user.name + ' '+ user.surname}}</p>
+			<p class="nick">{{user.nick}}</p>
+		</div>
+		<div class="clearfix"></div>
+
+		<div class="follow pull-left">
+			<button class="btn btn-success" *ngIf="!following" (click)="followUser(user._id)">Seguir
+		</button>
+		<button class="btn btn-primary" *ngIf="following" (click)="unfollowUser(user._id)"
+		(mouseenter)="mouseEnter(user._id)"
+		(mouseleave)="mouseLeave()"
+		[class.btn-danger]="user._id == followUserOver">
+
+		<span *ngIf="user._id == followUserOver; else following"
+		>Dejar de Seguir
+		</span>
+
+		<ng-template #following ></ng-template>
+			Siguiendo
+		
+		</button>
 	</div>
+	</div>
+
+	
+
 </div>	
 
 	</div>

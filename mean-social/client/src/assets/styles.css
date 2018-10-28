@@ -221,7 +221,10 @@
 	height: 100%;
 }
 #data-profile .user-name{
-	margin-top: 40px;
+	margin-top: 15px;
+}
+#data-profile .user-name .label{
+	margin-bottom: 25px;
 }
 #data-profile .user-name .name {
 	font-size: 24px;

@@ -15,9 +15,11 @@
 
 				<div class="user-name pull-left">
 				
-				<p class="name-surname">	<a href="#">{{user.name + '' + user.surname}}  </a></p>
+				<p class="name-surname">
+					<a [routerLink]="['/perfil/', user._id]">{{user.name + '' + user.surname}}  </a></p>
 				<p class="nickname">{{user.nick}}</p>
 				</div>
+
 				<!-- Botones seguir/dejar de seguir  -->
 				<!-- esta condicion es para que no nos muetro nuestro propio usuario -->
 				<div class="pull-right" *ngIf="user._id != identity._id"> 

@@ -24,20 +24,24 @@ export class ProfileComponent implements OnInit {
 	public token;
 	public stats;
 	public url;
-	public follow; //para indicar si el u suario nos sigue/o no
-
+	public following; 
+	public followed;
 
 
   constructor(
   	private _route: ActivatedRoute,
     private _router: Router,
     private _userService: UserService,
-    private _publicationService: FollowService) {
+    private _followService: FollowService) {
 
   	this.title = 'Perfil';
   	this.identity = this._userService.getIdentity();
   	this.token = this._userService.getToken();
   	this.url = GLOBAL.url;
+
+  	 this.following = false; 
+	 this.followed = false;
+
 
 
      }
@@ -68,6 +72,21 @@ export class ProfileComponent implements OnInit {
   				console.log(response);
   				this.user = response.user;
 
+  				if(response && response.following && response.following._id){
+  					this.following = true;
+  				}
+  				else {
+  					this.following = false;
+  				}
+
+  				if(response &&  response.followed &&  response.followed._id){
+  				this.followed = true;
+  				}
+  				else {
+  					this.followed = false;
+  				}
+
+
   			}else{
   				this.status ='error';
   								
@@ -92,6 +111,48 @@ export class ProfileComponent implements OnInit {
   				console.log(<any>error);
 
   		});
+  }
+
+  //boton de seguir
+  followUser(followed){
+  	//introducios nuestro id y al que vamos a seguir
+  	var follow = new Follow('', this.identity._id, followed);
+
+  	this._followService.addFollow(this.token, follow).subscribe(
+  		response =>{
+  			this.following = true;
+
+  		},
+  		error =>{
+
+  			console.log(<any> error);
+  		}
+  		);
+
+
+  }
+
+  unfollowUser(followed){
+  	this._followService.deleteFollow(this.token, followed).subscribe(
+  		response =>{
+  			this.following = false;
+  		},
+  		error =>{
+  			console.log(<any>error);
+  		}
+
+  		);
+
+
+  }
+  //Efecto botones
+  public followUserOver;
+  mouseEnter(user_id){
+  	this.followUserOver = user_id;
+  	  }
+
+  mouseLeave(){
+  	 this.followUserOver = 0;
   }
 
 
