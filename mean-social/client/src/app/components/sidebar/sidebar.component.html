@@ -72,7 +72,8 @@
 		</p>
 		<p>
 			<label>Sube tu fofo</label>
-			<input type="file" placeholder="Sube tu foto">
+			<!-- metodo que se ejecuta al seleccionar imagenes -->
+			<input type="file" placeholder="Sube tu foto" (change)="fileChangeEvent($event)">
 		</p>
 		<input type="submit" value="Enviar" class="btn btn-success" [disabled]="!newPubForm.form.valid">
 	</form>

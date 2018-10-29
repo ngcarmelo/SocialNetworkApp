@@ -9,10 +9,13 @@ import { PublicationService } from '../../services/publication.service';
 import {GLOBAL} from '../../services/global';
 import { Publication } from '../../models/publication';
 
+//Importar el servicio de subida de avatar, añadirlo tambien en provides abajo, y en el constructor:
+import { UploadService } from '../../services/upload.service';
+
 @Component({
   selector: 'sidebar',
   templateUrl: './sidebar.component.html',
-  providers: [UserService, PublicationService]  //Declaramos el servicio
+  providers: [UserService, PublicationService, UploadService]  //Declaramos el servicio
 
 })
 export class SidebarComponent implements OnInit {
@@ -27,6 +30,7 @@ export class SidebarComponent implements OnInit {
   constructor(
   	 private _userService: UserService, //Variable del servicio UserService
      private _publicationService: PublicationService,
+     private _uploadService: UploadService, //Variable del servicio de UploadService, subida avatar
      private _route: ActivatedRoute,
      private _router: Router
   	) {
@@ -54,6 +58,20 @@ export class SidebarComponent implements OnInit {
           this.status ='success';
           form.reset();
           this._router.navigate(['/timeline/']);  //redireccionamos
+
+          //Subir imagen 
+          //**file es el nombre del campo del fichero que tiene que recoger el backend, en este caso "file"
+         
+
+          // this._uploadService.makeFileRequest(this.url+'/upload-image-pub/'+response.publications._id, [], this.filesToUpload, this.token, 'file')
+
+          //         .then((result: any) =>{
+          //           this.publication.file = result.image; //que es lo que nos va a devolver el api
+
+          //         });
+
+
+
         }else {
             this.status ='error';
         }
@@ -69,6 +87,16 @@ export class SidebarComponent implements OnInit {
       }
       );
   }
+    // Para las subida de las imagenes, metodo para el input type file
+  public filesToUpload: Array<File>; //array de ficheros
+  //nos cogera los ficheros seleccionados en el input
+  fileChangeEvent(fileInput: any){ 
+    this.filesToUpload = <Array<File>>fileInput.target.files;
+  }
+
+
+
+
 
   // Output
   //Decorador Output y crear la propiedad  que será el evento --> "sended"
