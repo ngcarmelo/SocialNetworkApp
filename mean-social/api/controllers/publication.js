@@ -82,6 +82,35 @@ function savePublication(req, res){
 		});
 	}
 
+		//Publicaciones de un usuario
+	function getPublicationsUser (req, res){
+			//Nos muestra publicaciones de los usuarios que nos siguen
+			var page = 1;
+			//si hay parametro pagina por la url
+			if(req.params.page){
+				page = req.params.page;
+			}
+
+			var itemsPerpage = 4;
+			
+			
+				Publication.find({user: req.user.sub}).sort('-created_at').populate('user').paginate(page, itemsPerpage,(err, publications, total) => {
+					if(err) return res.status(500).send({message: 'Error al devolver publicaciones'});
+					if(!publications) return res.status(404).send({message: 'No hay publicaciones'});
+
+					return res.status(200).send({
+						total_items: total,
+						pages: Math.ceil(total/itemsPerpage),
+						page: page,
+						items_per_page: itemsPerpage,
+						publications
+					});
+
+				});
+			}
+
+
+
 //Devolver una publicacion gracias a su id
 function getPublication(req, res){
 	//Postam(get) y token de authorizacion.
