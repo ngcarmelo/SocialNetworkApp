@@ -451,20 +451,20 @@ return handleError(err);
 
 
 ///////
-  var publications = await Publication.count({"user":user_id}).estimatedDocumentCount((err, count) => {
-        if(err) return handleError(err);
-        return count;
-    });
+  // var publications = await Publication.count({"user":user_id}).estimatedDocumentCount((err, count) => {
+  //       if(err) return handleError(err);
+  //       return count;
+  //   });
 
 
 
-//   var publications = await Publication.count({"user":user_id}).exec() 
-//  .then(count=>{
-// return count;
-// })
-// .catch((err)=>{
-// return handleError(err);
-// });
+  var publications = await Publication.count({"user":user_id}).exec() 
+ .then(count=>{
+return count;
+})
+.catch((err)=>{
+return handleError(err);
+});
 
 /////////
 

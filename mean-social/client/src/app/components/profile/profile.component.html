@@ -74,9 +74,15 @@
 			</div>
 		</div>
 
-	
+	<!-- compomente para mostrar las publicaciones de un usuario -->
+<!-- de esta forma mandamos el valor de la variable al componente publications  -->
+<!-- de padre a hijo input -->
+	<div class="col-lg-12 publications" *ngIf="user">
+	<publications  [user]="user._id"></publications>
+	</div>
 
 </div>	
+
 
 	</div>
 	

@@ -104,6 +104,7 @@ export class ProfileComponent implements OnInit {
   	this._userService.getCounters(id).subscribe(
   		response =>{
   			console.log(response);
+  			//valor equivocado??
   			this.stats = response;
 
   		},

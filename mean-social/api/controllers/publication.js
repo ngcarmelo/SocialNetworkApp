@@ -91,10 +91,17 @@ function savePublication(req, res){
 				page = req.params.page;
 			}
 
+			var user = req.user.sub;
+			//si hay parametro user por la url
+			if(req.params.user){
+				user = req.params.user;
+			}
+
+
 			var itemsPerpage = 4;
 			
 			
-				Publication.find({user: req.user.sub}).sort('-created_at').populate('user').paginate(page, itemsPerpage,(err, publications, total) => {
+				Publication.find({user: user}).sort('-created_at').populate('user').paginate(page, itemsPerpage,(err, publications, total) => {
 					if(err) return res.status(500).send({message: 'Error al devolver publicaciones'});
 					if(!publications) return res.status(404).send({message: 'No hay publicaciones'});
 
@@ -243,6 +250,7 @@ module.exports ={
 	probando,
 	savePublication,
 	getPublications,
+	getPublicationsUser,
 	getPublication,
 	deletePublication,
 	uploadImage,

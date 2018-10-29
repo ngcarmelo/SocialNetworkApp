@@ -35,6 +35,15 @@ constructor(private _http: HttpClient){
 	return this._http.get(this.url+'/publications/'+page, {headers: headers});
 	}
 
+	//Publicaciones de un solo usuario
+	getPublicationsUser(token, user_id, page =1):Observable<any>{
+
+		let headers = new HttpHeaders().set('Content-type', 'application/json') //en php el application/json seria diferente
+										.set('Authorization',token);
+
+	return this._http.get(this.url+'/publications-user/'+ user_id + '/'+ page, {headers: headers});
+	}
+
 		// id de la publicacion a eliminar 
 	deletePublication(token, id):Observable<any>{
 		let headers = new HttpHeaders().set('Content-type', 'application/json') //en php el application/json seria diferente

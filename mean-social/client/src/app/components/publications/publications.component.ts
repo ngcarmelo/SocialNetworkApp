@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 //para poder acceder a los parametros que recibamos de esta url y redirecciones:
 import { Router, ActivatedRoute, Params } from '@angular/router';
 //Importacion del modelo de usuario: (Importacion de la clase user)
@@ -28,6 +28,9 @@ export class PublicationsComponent implements OnInit {
   public pages;   //numero de paginas
   public itemsPerPage;
   public publications:Publication[];
+  //Porque vamos a recibir una propiedad desde fuera del componente:
+  @Input() user: string;
+
 
   constructor(
   	private _route: ActivatedRoute,
@@ -45,11 +48,11 @@ export class PublicationsComponent implements OnInit {
 
    ngOnInit() {
   	console.log('publications.component cargado correctamente');
-    this.getPublications(this.page);
+    this.getPublications(this.user, this.page);
   }
-
-  getPublications(page, adding = false){
-      this._publicationService.getPublications(this.token, page).subscribe(response =>{
+    //el user se refiere al id
+  getPublications(user, page, adding = false){
+      this._publicationService.getPublicationsUser(this.token, user, page).subscribe(response =>{
          console.log(response);
          if(response.publications){
            this.total = response.total_items;
@@ -100,7 +103,7 @@ export class PublicationsComponent implements OnInit {
       }else {
         this.page += 1; //sino le sumamos una pagina a la actual
       }
-      this.getPublications(this.page, true);
+      this.getPublications(this.user, this.page, true);
   }
 
 
