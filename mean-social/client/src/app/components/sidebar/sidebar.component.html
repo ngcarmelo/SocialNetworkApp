@@ -8,7 +8,7 @@
 		</div>
 
 		<div class="name-surname pull-left">
-			<a href="#" class="username">
+			<a  [routerLink]="['/perfil/', identity._id]" class="username">
 				{{identity.name + ' '+ identity.surname}}
 			</a>
 			<p class="nickname">{{identity.nick}}</p>

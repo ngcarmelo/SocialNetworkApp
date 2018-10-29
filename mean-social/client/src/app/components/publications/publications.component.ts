@@ -67,7 +67,7 @@ export class PublicationsComponent implements OnInit {
              var arrayB = response.publications; //nuevo array que me devuelve el api
              this.publications = arrayA.concat(arrayB);
 
-             $("html,body").animate({scrollTop: $('body').prop('scrollHeight')}, 500);
+             $("html,body").animate({scrollTop: $('html').prop('scrollHeight')}, 500);
            }
                     
 
@@ -97,12 +97,14 @@ export class PublicationsComponent implements OnInit {
   }
   public noMore = false;
   viewMore(){
-    // Hasta que llegemos a la ultima pagina, final del array
-      if(this.publications.length == (this.total)){
+
+    this.page += 1; // sumamos una pagina a la actual
+   
+    // Si la pagina actual es la ultima
+      if(this.page == (this.page)){
         this.noMore = true; //significa que ya no podemos mostrar mas publicaciones (final del array)
-      }else {
-        this.page += 1; //sino le sumamos una pagina a la actual
       }
+
       this.getPublications(this.user, this.page, true);
   }
 

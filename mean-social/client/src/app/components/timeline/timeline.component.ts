@@ -123,10 +123,10 @@ getPublications(page, adding = false){
   public noMore = false;
   viewMore(){
     // Hasta que llegemos a la ultima pagina, final del array
-      if(this.publications.length == (this.total)){
-        this.noMore = true; //significa que ya no podemos mostrar mas publicaciones (final del array)
-      }else {
-        this.page += 1; //sino le sumamos una pagina a la actual
+    
+       this.page += 1; // le sumamos una pagina a la actual
+      if(this.page == (this.pages)){ //pagina actual es la ultima
+               this.noMore = true; //significa que ya no podemos mostrar mas publicaciones (final del array)
       }
       this.getPublications(this.page, true);
   }
