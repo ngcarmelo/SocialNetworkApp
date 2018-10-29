@@ -55,20 +55,22 @@ export class SidebarComponent implements OnInit {
       response =>{
         if(response.publication){
         //  this.publication = response.publication;
-          this.status ='success';
-          form.reset();
-          this._router.navigate(['/timeline/']);  //redireccionamos
-
+        
           //Subir imagen 
-          //**file es el nombre del campo del fichero que tiene que recoger el backend, en este caso "file"
+          //**image es el nombre del campo del fichero que tiene que recoger el backend, en este caso "image"
          
+          this._uploadService.makeFileRequest(this.url+'/upload-image-pub/'+response.publication._id, [], this.filesToUpload, this.token, 'image')
 
-          // this._uploadService.makeFileRequest(this.url+'/upload-image-pub/'+response.publications._id, [], this.filesToUpload, this.token, 'file')
+                  .then((result: any) =>{
+                    this.publication.file = result.image; //que es lo que nos va a devolver el api
 
-          //         .then((result: any) =>{
-          //           this.publication.file = result.image; //que es lo que nos va a devolver el api
+                      this.status ='success';
+                      form.reset();
+                      this._router.navigate(['/timeline/']);  //redireccionamos
 
-          //         });
+
+
+                  });
 
 
 
@@ -106,5 +108,5 @@ export class SidebarComponent implements OnInit {
     this.sended.emit({send: 'true'});  //emito el evento
   }
 
-
+  
 }

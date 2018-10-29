@@ -28,6 +28,8 @@ export class TimelineComponent implements OnInit {
   public pages;   //numero de paginas
   public itemsPerPage;
   public publications:Publication[];
+  public showImage;
+
 
 
 
@@ -137,7 +139,13 @@ getPublications(page, adding = false){
    this.getPublications(1);
   }
 
+showThisImage (id){
+    this.showImage = id;
+  }
 
+hideThisImage (id){
+    this.showImage = 0;
+  }
 
 
 

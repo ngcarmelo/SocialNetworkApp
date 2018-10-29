@@ -166,6 +166,7 @@ function uploadImage(req, res){
 		//** 
 		//**nota los console.log podemos verlos directamente en la consola, despues de ejecutar la peticion en el postman
 		//es "image" porque así se lo hemos pasado por el body
+		//image porque nosotros queremos
 		var file_path = req.files.image.path;
 		console.log(file_path); //obtenemos ruta completa
 		var file_split = file_path.split('\\');
