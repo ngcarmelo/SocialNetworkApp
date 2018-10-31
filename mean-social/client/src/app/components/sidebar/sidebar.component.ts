@@ -56,21 +56,30 @@ export class SidebarComponent implements OnInit {
         if(response.publication){
         //  this.publication = response.publication;
         
-          //Subir imagen 
+        if(this.filesToUpload && this.filesToUpload.length){
+            //Subir imagen 
           //**image es el nombre del campo del fichero que tiene que recoger el backend, en este caso "image"
-         
           this._uploadService.makeFileRequest(this.url+'/upload-image-pub/'+response.publication._id, [], this.filesToUpload, this.token, 'image')
 
-                  .then((result: any) =>{
-                    this.publication.file = result.image; //que es lo que nos va a devolver el api
+               .then((result: any) =>{
+                  this.publication.file = result.image; //que es lo que nos va a devolver el api
 
-                      this.status ='success';
-                      form.reset();
-                      this._router.navigate(['/timeline/']);  //redireccionamos
-
-
-
+                    this.status ='success';
+                     form.reset();
+                     this._router.navigate(['/timeline/']);  //redireccionamos
                   });
+
+
+        }else{
+          
+            this.status ='success';
+             form.reset();
+             this._router.navigate(['/timeline/']);  //redireccionamos
+
+
+        }
+
+        
 
 
 

@@ -134,7 +134,7 @@ getPublications(page, adding = false){
   }
 
   //Evento output del sidebar
-  refresh(event){
+  refresh(event = null){
    // console.log(event);
    this.getPublications(1);
   }
@@ -148,6 +148,24 @@ hideThisImage (id){
   }
 
 
+deletePublication(id){
+
+  this._publicationService.deletePublication(this.token, id).subscribe(
+    // Subscribe tiene 2 funciones de callback--> response y error
+        response =>{
+          this.refresh();
+        },
+        error=>{
+            console.log(<any>error);
+
+        }
+
+
+
+
+
+    );
+}
 
 
 

@@ -22,7 +22,45 @@
 				<h4 class="publication-text pull-left">
 					{{publication.text}}
 				</h4>
-				<div class="col-lg-12" *ngIf="publication.file != 'null'">
+			
+					<!-- Boton de borrar -->
+				<div class="pull-right" *ngIf="publication.user._id == identity._id">
+					&nbsp;
+				<!-- segun el valor de la variable showImage, aparecerá un boton u otro -->
+				
+				<!-- <button  class="btn btn-danger pull-right" (click)="showThisImage(publication._id)"
+				*ngIf="showImage != publication._id">
+					<span class="glyphicon glyphicon-trash"></span>
+				</button> -->
+
+						<!-- Button HTML (to Trigger Modal) -->
+		<a href="#myModal{{publication._id}}" role="button" class="btn btn-large btn-danger" data-toggle="modal">	<span class="glyphicon glyphicon-trash" *ngIf="showImage != publication._id"></span></a>
+		 &nbsp;
+		<!-- Modal HTML -->
+		<div id="myModal{{publication._id}}" class="modal fade">
+		    <div class="modal-dialog">
+		        <div class="modal-content">
+		            <div class="modal-header">
+		                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		                <h4 class="modal-title">¿Seguro que quieres eliminar la publicación?</h4>
+		            </div>
+		            <div class="modal-body">
+		                <p>Si la borras no podrás recuperarla</p>
+		                <p>{{publication.text}}</p>
+		            </div>
+		            <div class="modal-footer">
+		                <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+		                <button type="button" class="btn btn-primary" (click)="deletePublication(publication._id)" data-dismiss="modal">Borrar la publicación</button>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+				
+				</div>
+
+
+
+				<div class="pull-right" *ngIf="publication.file != 'null'">
 				<!-- segun el valor de la variable showImage, aparecerá un boton u otro -->
 				<button class="btn btn-warning pull-right" (click)="showThisImage(publication._id)"
 				*ngIf="showImage != publication._id">
@@ -34,6 +72,7 @@
 				</button>
 				</div>
 				<div class="col-lg-12" *ngIf="publication.file != 'null' && showImage == publication._id">
+					<br/>
 					<img src="{{url+ '/get-image-pub/'+ publication.file}}" alt="" class="col-lg-12">
 				</div>
 			</div>
