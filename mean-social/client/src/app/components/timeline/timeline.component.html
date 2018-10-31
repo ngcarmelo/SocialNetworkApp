@@ -34,7 +34,7 @@
 				</button> -->
 
 						<!-- Button HTML (to Trigger Modal) -->
-		<a href="#myModal{{publication._id}}" role="button" class="btn btn-large btn-danger" data-toggle="modal">	<span class="glyphicon glyphicon-trash" *ngIf="showImage != publication._id"></span></a>
+		<a href="#myModal{{publication._id}}" role="button" class="btn btn-large btn-danger" data-toggle="modal" *ngIf="showImage != publication._id">	<span class="glyphicon glyphicon-trash" *ngIf="showImage != publication._id"></span></a>
 		 &nbsp;
 		<!-- Modal HTML -->
 		<div id="myModal{{publication._id}}" class="modal fade">

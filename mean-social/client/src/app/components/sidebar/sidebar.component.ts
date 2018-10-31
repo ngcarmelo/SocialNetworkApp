@@ -49,7 +49,7 @@ export class SidebarComponent implements OnInit {
   	console.log(this.stats);
   }
 
-  onSubmit(form){
+  onSubmit(form, $event){
   	console.log(this.publication);
     this._publicationService.addPublication(this.token, this.publication).subscribe(
       response =>{
@@ -64,18 +64,20 @@ export class SidebarComponent implements OnInit {
                .then((result: any) =>{
                   this.publication.file = result.image; //que es lo que nos va a devolver el api
 
-                    this.status ='success';
+                     this.status ='success';
                      form.reset();
                      this._router.navigate(['/timeline/']);  //redireccionamos
+
+                     this.sended.emit({send: 'true'});  //emito el evento
                   });
 
 
         }else{
           
-            this.status ='success';
+             this.status ='success';
              form.reset();
              this._router.navigate(['/timeline/']);  //redireccionamos
-
+             this.sended.emit({send: 'true'});  //emito el evento
 
         }
 
