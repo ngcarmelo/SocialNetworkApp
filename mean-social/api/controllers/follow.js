@@ -184,11 +184,24 @@ function getFollowedUsers(req, res){
 		if(err) return res.status(500).send({message: 'Error en el servidor'});
 		if(!follows) return res.status(404).send({message: 'No te sigue ningun usuario'});
 		
+		// return res.status(200).send({
+		// 	total: total,
+		// 	pages: Math.ceil(total/itemsPerPage),
+		// 	follows
+		// });
+
+			//así es mas completo y nos devuelven mas datos
+	followUserIds(req.user.sub).then((value)=>{
 		return res.status(200).send({
 			total: total,
 			pages: Math.ceil(total/itemsPerPage),
-			follows
+			follows,
+			users_following: value.following,
+			user_follow_me: value.followed
 		});
+	});
+
+
 	});
 
 }

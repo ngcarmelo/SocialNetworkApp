@@ -51,7 +51,17 @@ export class FollowService{
 			}
 
 
-	
+	getFollowed(token, userId = null, page =1):Observable<any>{
+			
+			let headers = new HttpHeaders().set('Content-Type','application/json') //forma en que se envian los datos
+								    	.set('Authorization',token); 	//sacamos el token 
+
+			var url =  this.url+'/followed';
+			if(userId != null){
+				url =  this.url+'/followed/'+userId+'/'+page;
+			}
+				return this._http.get(url, {headers: headers});
+			}			
 
 
 }
