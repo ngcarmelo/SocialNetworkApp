@@ -2,17 +2,18 @@
 	<h3>{{title}}</h3>
 	<div class="sidebar-admin">
 		<ul class="nav nav-pills nav-stacked nav-pills-stacked-expample">
-			<li role="presentation" >
-				<a href="#">Mensajes Recibidos</a>
+			<li role="presentation" [routerLinkActive]="['active']" >
+				<a [routerLink]="['enviar']">Enviar Mensaje</a>
 			</li>
-			<li role="presentation" >
-				<a href="#">Mensajes Enviados</a>
+			<li role="presentation" [routerLinkActive]="['active']" >
+				<a [routerLink]="['recibidos']">Mensajes Recibidos</a>
 			</li>
-			<li role="presentation" >
-				<a href="#">Enviar Mensajes</a>
+			<li role="presentation" [routerLinkActive]="['active']" >
+				<a [routerLink]="['enviados']">Mensajes Enviados</a>
 			</li>
+			
 			<li role="presentation" >
-				<a href="#">Información</a>
+				<a [routerLink]="['/home']">Información</a>
 			</li>
 			
 			
@@ -23,4 +24,5 @@
 
 <div class="col-lg-8">
 	<!-- componentes/router outlet  -->
+	<router-outlet></router-outlet>
 </div>

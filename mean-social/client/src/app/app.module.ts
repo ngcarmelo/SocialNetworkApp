@@ -15,6 +15,13 @@ import { routing, appRoutingProviders} from './app.routing';
 
 import { MomentModule} from 'angular2-moment';   //modulo para las fechas
 
+//Modulo Custom -mensajeria privada-
+import { MessagesModule } from './messages/messages.module';
+
+
+
+
+
 
 import { AppComponent } from './app.component';
 //Importamos componentes:
@@ -48,10 +55,11 @@ import { FollowedComponent } from './components/followed/followed.component';
   ],
   imports: [     //cargar modulos
     BrowserModule,
-    routing, 
+    routing,    //rutas
     FormsModule, //
     HttpClientModule, //
-    MomentModule  // Modulo para las fechas
+    MomentModule,  // Modulo para las fechas
+    MessagesModule // Modulo Custon de mensajeria privada
   ],
   providers: [  //cargar servicios de forma global
   appRoutingProviders
