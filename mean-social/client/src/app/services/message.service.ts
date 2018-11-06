@@ -24,7 +24,7 @@ constructor(private _http: HttpClient){
 		let headers = new HttpHeaders().set('Content-type', 'application/json') //en php el application/json seria diferente
 										.set('Authorization',token);
 		//Peticion al API:
-		return this._http.post(this.url+'message', params, {headers: headers});
+		return this._http.post(this.url+'/message', params, {headers: headers});
 
 	}
 

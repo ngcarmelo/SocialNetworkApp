@@ -21,6 +21,12 @@
         <span class="glyphicon glyphicon-user"></span>
         Gente</a>
       </li>
+
+        <li>
+        <a [routerLink]="['/mensajes']" [routerLinkActive]="['active']">
+        <span class="glyphicon glyphicon-envelope"></span>
+        Mensajes</a>
+      </li>
     </ul>
     
     <ul class="nav navbar navbar-nav navbar-right" *ngIf="!identity">

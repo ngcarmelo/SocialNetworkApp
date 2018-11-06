@@ -142,23 +142,6 @@ followed: followed
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //Listar los usuarios que nos  siguen
 function getFollowedUsers(req, res){
 	//recogemos el valor del Id del usuario identificado:
