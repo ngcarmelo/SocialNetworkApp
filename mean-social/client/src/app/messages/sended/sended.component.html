@@ -6,7 +6,7 @@
 		
 		<!-- LISTADO  -->
 		<div *ngFor="let message of messages" class="item-user">
-			<div class="panel panel-default">
+			<div class="panel panel-default" *ngIf="message.emitter">
 				<div class="panel-body">
 				<div class="image-user pull-left">
 					<a href="#">

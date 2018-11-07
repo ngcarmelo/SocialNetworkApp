@@ -1,0 +1,54 @@
+Vulnerabilities:
+
+npm install -g nmp@latest (actualizar)
+npm -v
+npm cache clean --force (limpiar cache)
+
+Solucionar alerta de audiciones de seguridad:
+npm set audit false
+
+Migrar un proyecto a ultima version:
+ng update (dentro de nuestro proyecto) 
+*nos daria error
+así que habria que instalar el nuevo angular cli:
+npm install @angular/cli@latest
+ahora si podemos ejecutar el comando:
+ng update @angular/cli
+y acontinuacion:
+ng update
+**Nos indicará las librerias que necesitan actualizacion
+**y los comandos para actualizar cada libreria, o uno para actualizarlas todas
+--> ng update --all
+****Ahora nos muestra posibles errores de incompatibilidades:
+y así vamos a package.json y cambiamos las versiones de cada uno.
+Ejecutamos:
+npm update (para que se instalen las nuevas dependencias)
+Ejecutamos:
+ng update
+**nos podra decir que necesitamos actualizar
+ejecutamos:
+ng update --all --force
+Ya estaría actualizado
+
+ejecutamos: ng serve
+si nos indica algun fallo de versiones:
+desistalamos por ejemplo:
+ npm uninstall --save typescript
+ npm cache clean --force
+ npm install --save-dev typescript@2.7.2
+
+Y ya podemos : ng serve
+
+**ejemplo bootstrap incompatible:
+desistalamos bootstrap: npm uninstall --save bootstrap
+y volvemos a  instalar la que nos interesa npm install --save bootstrap@3.3.6
+
+**jquery
+npm uninstall --save jquery
+npm install --save jquery@1.9.1
+**al cambiar version podria cambiar la ruta del script de jquery, cambiarlo en angular.json
+
+///////////////////Solucionar error Observable Rxjs
+2 formas: 
+1) instalar desde la consola: npm install --save rxjs-compat
+2) Cargarlo así: import { Observable } from 'rxjs'; 

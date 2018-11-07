@@ -17,6 +17,10 @@ import { SendedComponent } from './sended/sended.component';
 
 import { MomentModule} from 'angular2-moment';   //modulo para las fechas
 
+//Servicios  **necesarios para utilizar guards
+import { UserService } from '../services/user.service';
+import { UserGuard } from  '../services/user.guard';
+
 
 @NgModule({
 
@@ -40,7 +44,8 @@ import { MomentModule} from 'angular2-moment';   //modulo para las fechas
     SendedComponent
   ],
     providers: [  //cargar servicios de forma global
-  
+    UserService,
+    UserGuard
     ]
  
 })

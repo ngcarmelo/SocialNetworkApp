@@ -37,6 +37,10 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { FollowingComponent } from './components/following/following.component';
 import { FollowedComponent } from './components/followed/followed.component';
 
+//Servicios  **necesarios para utilizar guards
+import { UserService } from './services/user.service';
+import { UserGuard } from  './services/user.guard';
+
 //Aqui tambien indicamos los componentes, directivas, pipes:
 @NgModule({
   declarations: [
@@ -62,7 +66,9 @@ import { FollowedComponent } from './components/followed/followed.component';
     MessagesModule // Modulo Custon de mensajeria privada
   ],
   providers: [  //cargar servicios de forma global
-  appRoutingProviders
+  appRoutingProviders,
+  UserService,
+  UserGuard
     ],
   bootstrap: [AppComponent]
 })

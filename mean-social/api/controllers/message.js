@@ -54,11 +54,11 @@ function saveMessage(req, res){
 			page = req.params.page;
 		}
 
-		var itemsPerPage = 2;
+		var itemsPerPage = 4;
 		//Busca  mensajes que hemos recibido, con nuestro Id
 		//Message.find({receiver: userId}).populate('emitter').paginate(page, itemsPerPage,(err, messages, total)=>{
 		//Con el segundo parametro del populate, podemos elegir los campos a mostrar, para que no salgan todos
-		Message.find({receiver: userId}).populate('emitter', 'name surname image nick _id').paginate(page, itemsPerPage,(err, messages, total)=>{
+		Message.find({receiver: userId}).populate('emitter', 'name surname image nick _id').sort('create_at').paginate(page, itemsPerPage,(err, messages, total)=>{
 			if(err) return res.status(500).send({message: 'Error en la peticion'});
 			if(!messages) return res.status(404).send({message: 'No hay mensajes'});
 
@@ -87,10 +87,10 @@ function saveMessage(req, res){
 			page = req.params.page;
 		}
 
-		var itemsPerPage = 2;
+		var itemsPerPage = 4;
 		//Busca  mensajes que hemos enviado, con nuestro Id
 		//Con el segundo parametro del populate, podemos elegir los campos a mostrar, para que no salgan todos
-		Message.find({emitter: userId}).populate('emitter receiver', 'name surname image nick _id').paginate(page, itemsPerPage,(err, messages, total)=>{
+		Message.find({emitter: userId}).populate('emitter receiver', 'name surname image nick _id').sort('create_at').paginate(page, itemsPerPage,(err, messages, total)=>{
 			if(err) return res.status(500).send({message: 'Error en la peticion'});
 			if(!messages) return res.status(404).send({message: 'No hay mensajes'});
 
