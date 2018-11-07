@@ -15,6 +15,9 @@ import { AddComponent } from './add/add.component';
 import { ReceivedComponent } from './received/received.component';
 import { SendedComponent } from './sended/sended.component';
 
+import { MomentModule} from 'angular2-moment';   //modulo para las fechas
+
+
 @NgModule({
 
  declarations: [
@@ -27,7 +30,8 @@ import { SendedComponent } from './sended/sended.component';
   imports: [
     CommonModule,
     FormsModule,
-    MessagesRoutingModule //rutas
+    MessagesRoutingModule, //rutas
+    MomentModule,  // Modulo para las fechas
   ],
    exports: [
     MainComponent,

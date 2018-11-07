@@ -24,7 +24,12 @@ export class SendedComponent implements OnInit {
   public token;
   public url: string;
   public status: string;
-  public messages: Message[];  
+  public messages: Message[]; 
+  public pages;
+  public total;
+  public page;
+  public next_page;
+  public prev_page; 
 
 
   constructor(
@@ -44,26 +49,64 @@ export class SendedComponent implements OnInit {
 
   ngOnInit() {
   		console.log('sended.component.cargado');
-  		this.getMessages();
+  		this.actualPage();
   }
 
-  getMessages(){
-
-  	this._messageService.getEmmitMessages(this.token, 1).subscribe(
+  getMessages(token, page){
+  		
+  	this._messageService.getEmmitMessages(token, page).subscribe(
 
   		response => {
-  			if(response.message){
-  				console.log(response);
+  			if(response.messages){
   				this.messages = response.messages;
+  				//paginacion
+  				this.total = response.total;
+  				this.pages = response.pages;
   			}
   		},
   		error =>{
-  			
-  			console.log(<any>error);
+  				console.log(<any>error);
   		}
   		);
+  }
+
+
+actualPage(){
+    //Así lo hacemos para recoger los parametros recibidos por url de la propia pagina
+    this._route.params.subscribe(params =>{
+
+     
+      let page = +params['page'];  //Convertimos a entero con el ->  " + "
+      this.page = page;
+
+      if(!params['page']){
+        page =1;
+      }
+
+      if(!page) {
+        page =1
+      }else{
+        this.next_page = page+1;
+        this.prev_page = page+1;
+
+        if(this.prev_page <=0){
+          this.prev_page =1;
+        }
+      }
+     //Devolver listado de  usuarios
+     this.getMessages(this.token, this.page);
+
+
+    });
 
   }
+
+
+
+
+
+
+
 
 
 
