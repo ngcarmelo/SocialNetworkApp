@@ -3,7 +3,7 @@
 .h1-strong {
 	font-size: 35px;
 	font-weight: bold;
-	/*margin-left: 13px;*/
+	margin-left: 13px;
 	margin-bottom: 20px;
 	padding-bottom: 15px;
 	border-bottom:  1px solid #eee;
@@ -47,6 +47,7 @@
 	overflow: hidden;
 	margin-top: 9px;
 	margin-right: 2px;
+	margin-left: 15px;
 }
 
 .navigation .avatar img {
@@ -294,7 +295,9 @@
 	max-width: 20px;
 }
 
-
+.btn-group-lg>.btn, .btn-lg {
+   margin-right: 10px!important;
+}
 
 
 
