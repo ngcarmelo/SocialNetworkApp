@@ -31,6 +31,8 @@ export class SendedComponent implements OnInit {
   public next_page;
   public prev_page; 
 
+  public loading: boolean;
+
 
   constructor(
     private _route: ActivatedRoute,
@@ -39,11 +41,13 @@ export class SendedComponent implements OnInit {
     private _followService: FollowService,
     private _userService: UserService
   	) { 
- 	this.title ='Mensajes Enviados';
-
+ 	   this.title ='Mensajes Enviados';
   	 this.identity = this._userService.getIdentity();
- 	 this.token = this._userService.getToken();
- 	 this.url = GLOBAL.url;
+ 	   this.token = this._userService.getToken();
+ 	   this.url = GLOBAL.url;
+
+     this.loading = true;
+
  	
   }
 
@@ -62,6 +66,7 @@ export class SendedComponent implements OnInit {
   				//paginacion
   				this.total = response.total;
   				this.pages = response.pages;
+          this.loading = false; 
   			}
   		},
   		error =>{

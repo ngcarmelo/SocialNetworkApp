@@ -1,5 +1,11 @@
+<div class="loading col-lg-12" *ngIf="loading">
+	<img src="../../assets/loader.gif" alt="">	
+</div>
+
+
 <div class="col-lg-10">
 	<h3>{{title}}</h3>
+
 
 	<!-- listado mensajes enviados -->
 	<div class="people" *ngIf="messages">

@@ -257,3 +257,12 @@
 #data-profile .publications {
 	margin-top: 40px;
 }
+
+.loading {
+	margin: 25px;
+	
+}
+
+.loading img {
+	max-width: 20px;
+}
