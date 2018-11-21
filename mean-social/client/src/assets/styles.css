@@ -132,11 +132,13 @@
 #user-card, #new-publication {
 	padding: 25px;
 	width: 32%;
+
 }
 
 .sidebar-32 {
 	width: 32%!important;
 	padding: 0px!important;
+
 }
 
 
@@ -155,6 +157,7 @@
 #user-card, #new-publication {
 	padding: 25px;
 	width: 100%;
+	margin-left: 25px!important;
 }
 
 }
