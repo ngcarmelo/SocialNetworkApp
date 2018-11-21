@@ -52,7 +52,7 @@
 
 .navigation .avatar img {
 	height: auto;
-	width: 38px;
+	width:46px;
 }
 
 .jumbotron{
@@ -141,9 +141,6 @@
 
 }
 
-
-
-
 }
 
 @media (max-width:1170px) {
@@ -156,8 +153,8 @@
 
 #user-card, #new-publication {
 	padding: 25px;
-	width: 100%;
-	margin-left: 25px!important;
+	width: 96%;
+	margin-left: 10px!important;
 }
 
 }
