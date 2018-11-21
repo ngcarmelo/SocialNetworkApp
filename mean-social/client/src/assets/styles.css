@@ -119,31 +119,48 @@
 
 /* SIDEBAR */
 
+/*.sidebar-32 {
+	width: 32%!important;
+	padding: 0px!important;
+/*	margin-left: 25px!important;
+}*/
+
+
+@media (min-width: 1170px) {
+ 
+
+#user-card, #new-publication {
+	padding: 25px;
+	width: 32%;
+}
+
 .sidebar-32 {
 	width: 32%!important;
 	padding: 0px!important;
-	margin-left: 25px!important;
 }
 
 
-@media (min-width: @screen-lg-min) { 
 
-#user-card, #new-publication {
-	padding: 25px!important;
-	width: 32%!important;
 
 }
 
-
- }
-
+@media (max-width:1170px) {
+ 
+ .sidebar-32 {
+ 		width: 100%!important;
+		margin-left: 25px!important;
+}
 
 
 #user-card, #new-publication {
 	padding: 25px;
-	width: 90%;
-	margin-left: 25px!important;
+	width: 100%;
 }
+
+}
+
+
+
 
 
 /*
