@@ -1,4 +1,4 @@
-<div class="col-lg-8 col-lg-offset-2">
+<div class="col-lg-8 col-lg-offset-2" *ngIf="identity">
 	
 		<div class="jumbotron">
 				<h1 class="">{{title}}</h1>
@@ -14,5 +14,14 @@
 						Gente
 					</a>
 				</p>
+		</div>
+</div>
+
+<div class="col-lg-8 col-lg-offset-2" *ngIf="!identity">
+	
+		<div class="jumbotron">
+				<h1 class="">{{titleAlt}}</h1>
+				<p>   Disfruta de las publicaciones de tus amigos y comparte tu vida :)</p>
+				
 		</div>
 </div>

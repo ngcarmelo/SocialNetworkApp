@@ -10,6 +10,7 @@ import { UserService } from '../../services/user.service';
 })
 export class HomeComponent implements OnInit {
 	public title:string;
+  public titleAlt:string;
   public identity;
 
 
@@ -17,6 +18,7 @@ export class HomeComponent implements OnInit {
     private _userService: UserService
     ) {
   	this.title ='Bienvenido a NGSocial';
+    this.titleAlt ='Registrate en  NGSocial';
    }
 
   ngOnInit() {
