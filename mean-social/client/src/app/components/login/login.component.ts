@@ -135,9 +135,6 @@ getToken(){
 
 
 
-
-
-
  getCounters(){
       this._userService.getCounters().subscribe(
         response =>{

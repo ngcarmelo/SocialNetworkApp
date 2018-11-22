@@ -40,9 +40,7 @@ export class ProfileComponent implements OnInit {
   	this.url = GLOBAL.url;
 
   	 this.following = false; 
-	 this.followed = false;
-
-
+  	 this.followed = false;
 
      }
 

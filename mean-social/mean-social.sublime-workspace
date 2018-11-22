@@ -519,33 +519,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "client/src/app/services/user.service.ts",
-			"settings":
-			{
-				"buffer_size": 3986,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "client/src/app/components/login/login.component.html",
-			"settings":
-			{
-				"buffer_size": 1040,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "client/src/app/components/login/login.component.ts",
-			"settings":
-			{
-				"buffer_size": 3680,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -592,25 +565,25 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Users/ngcar/Desktop/Red Social JS/mean-social",
-		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/api",
-		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/api/controllers",
-		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/client",
-		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/client/src",
-		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/client/src/app",
-		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/client/src/app/components",
-		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/client/src/app/components/login",
-		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/client/src/app/services",
-		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/client/src/assets"
 	],
 	"file_history":
 	[
-		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/client/src/app/services/user.guard.ts",
-		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/client/src/app/components/register/register.component.html",
-		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/client/src/app/components/register/register.component.ts",
 		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/client/src/app/services/user.service.ts",
+		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/api/controllers/user.js",
+		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/client/src/app/components/profile/profile.component.html",
+		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/client/src/app/components/profile/profile.component.ts",
+		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/api/controllers/follow.js",
+		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/api/routes/user.js",
+		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/client/src/app/components/login/login.component.ts",
+		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/client/src/app/components/login/login.component.html",
+		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/client/src/app/app.routing.ts",
+		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/api/services/jwt.js",
+		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/api/midlewares/authenticated.js",
+		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/client/src/app/components/register/register.component.ts",
+		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/client/src/app/components/register/register.component.html",
 		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/client/src/app/components/home/home.component.ts",
 		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/client/src/app/components/home/home.component.html",
+		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/client/src/app/services/user.guard.ts",
 		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/client/src/app/components/sidebar/sidebar.component.html",
 		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/client/src/assets/styles.css",
 		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/client/src/app/components/timeline/timeline.component.html",
@@ -627,7 +600,6 @@
 		"/C/Users/ngcar/Desktop/Red-Social-produccion/client_dev/src/app/app.module.ts",
 		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/client/src/app/messages/sended/sended.component.html",
 		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/client/src/app/messages/sended/sended.component.ts",
-		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/client/src/app/app.routing.ts",
 		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/client/src/app/app.module.ts",
 		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/client/src/app/messages/messages-routing.module.ts",
 		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/client/package.json",
@@ -639,16 +611,13 @@
 		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/client/src/app/messages/received/received.component.html",
 		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/api/controllers/message.js",
 		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/client/src/app/services/message.service.ts",
-		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/api/controllers/follow.js",
 		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/client/src/app/services/follow.service.ts",
 		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/client/src/app/components/following/following.component.ts",
 		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/client/src/app/messages/main/main.component.ts",
 		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/client/src/app/messages/main/main.component.html",
 		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/client/src/app/components/followed/followed.component.html",
 		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/client/src/app/components/following/following.component.html",
-		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/client/src/app/components/login/login.component.ts",
 		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/client/src/app/components/followed/followed.component.ts",
-		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/client/src/app/components/profile/profile.component.html",
 		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/client/src/app/components/users/users.component.html",
 		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/client/src/app/components/users/users.component.ts",
 		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/client/src/app/components/timeline/timeline.component.ts",
@@ -657,15 +626,10 @@
 		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/client/src/app/components/publications/publications.component.html",
 		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/client/src/app/components/publications/publications.component.ts",
 		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/client/src/app/services/publication.service.ts",
-		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/client/src/app/components/profile/profile.component.ts",
-		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/api/controllers/user.js",
 		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/api/routes/publication.js",
 		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/client/src/app/components/user-edit/user-edit.component.ts",
-		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/api/routes/user.js",
 		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/client/src/app/services/upload.service.ts",
 		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/client/src/app/components/user-edit/user-edit.component.html",
-		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/api/services/jwt.js",
-		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/client/src/app/components/login/login.component.html",
 		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/api/models/user.js",
 		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/client/src/app/components/register/register.component.spec.ts",
 		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/client/src/app/models/user.ts",
@@ -682,7 +646,6 @@
 		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/api/models/publication.js",
 		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/api/models/follow.js",
 		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/api/routes/follow.js",
-		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/api/midlewares/authenticated.js",
 		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/api/uploads/users/-6JITAwwZrSQhbWqWeiwHgY5.jpg",
 		"/C/Users/ngcar/Desktop/Master JS/backend/index.js",
 		"/C/Users/ngcar/Desktop/Red Social JS/mean-social/package-lock.json",
@@ -792,591 +755,8 @@
 	"groups":
 	[
 		{
-			"selected": 1,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "client/src/app/services/user.service.ts",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3986,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.clone": 28,
-							"bracket_highlighter.clone_locations":
-							{
-								"close":
-								{
-									"1":
-									[
-										11,
-										12
-									]
-								},
-								"icon":
-								{
-									"1":
-									[
-										"Packages/BracketHighlighter/icons/single_quote.png",
-										"region.greenish"
-									]
-								},
-								"open":
-								{
-									"1":
-									[
-										0,
-										1
-									]
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.clone_regions":
-							[
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content"
-							],
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-								},
-								"icon":
-								{
-								},
-								"open":
-								{
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content"
-							],
-							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
-							"translate_tabs_to_spaces": false,
-							"typescript_plugin_format_options":
-							{
-								"convertTabsToSpaces": false,
-								"indentSize": 4,
-								"tabSize": 4
-							},
-							"use_tab_stops": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "client/src/app/components/login/login.component.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1040,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1023,
-								1040
-							]
-						],
-						"settings":
-						{
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.clone": -1,
-							"bracket_highlighter.clone_locations":
-							{
-								"close":
-								{
-									"1":
-									[
-										180,
-										183
-									]
-								},
-								"icon":
-								{
-									"1":
-									[
-										"Packages/BracketHighlighter/icons/tag.png",
-										"region.orangish"
-									]
-								},
-								"open":
-								{
-									"1":
-									[
-										1,
-										4
-									]
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.clone_regions":
-							[
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content"
-							],
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-								},
-								"icon":
-								{
-								},
-								"open":
-								{
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content"
-							],
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"translate_tabs_to_spaces": false,
-							"typescript_plugin_format_options":
-							{
-								"convertTabsToSpaces": false,
-								"indentSize": 4,
-								"tabSize": 4
-							}
-						},
-						"translation.x": 0.0,
-						"translation.y": 52.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "client/src/app/components/login/login.component.ts",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3680,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.clone": 30,
-							"bracket_highlighter.clone_locations":
-							{
-								"close":
-								{
-								},
-								"icon":
-								{
-								},
-								"open":
-								{
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.clone_regions":
-							[
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content"
-							],
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-								},
-								"icon":
-								{
-								},
-								"open":
-								{
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content"
-							],
-							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"typescript_plugin_format_options":
-							{
-								"convertTabsToSpaces": true,
-								"indentSize": 2,
-								"tabSize": 2
-							},
-							"use_tab_stops": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				}
 			]
 		}
 	],
