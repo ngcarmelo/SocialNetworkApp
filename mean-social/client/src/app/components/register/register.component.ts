@@ -39,7 +39,7 @@ export class RegisterComponent implements OnInit {
   	  	console.log('Componente de registro cargado');
 
   }
-  //Le pasamos esta variable para dejar en blancco el formulario
+  //Le pasamos esta variable para dejar en blanco el formulario
   //Mirar html que le hemos pasado el "registerForm" pero para abreviar ahora como form
   onSubmit(form){
   	//Metodo del Sercivio userService:
